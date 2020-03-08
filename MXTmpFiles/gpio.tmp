@@ -1,0 +1,25 @@
+
+/**
+#t* @brief GPIO Initialization Function
+#t* @param None
+#t* @retval None
+#t*/
+static void MX_GPIO_Init(void)
+{
+#tGPIO_InitTypeDef GPIO_InitStruct = {0};
+#n#t/* GPIO Ports Clock Enable */
+#t__HAL_RCC_GPIOC_CLK_ENABLE();
+#t__HAL_RCC_GPIOH_CLK_ENABLE();
+#t__HAL_RCC_GPIOA_CLK_ENABLE();
+#t__HAL_RCC_GPIOB_CLK_ENABLE();
+#n#t/*Configure GPIO pin Output Level */
+#tHAL_GPIO_WritePin(FLASH_CS_GPIO_Port, FLASH_CS_Pin, GPIO_PIN_RESET);
+#n#t/*Configure GPIO pin : FLASH_CS_Pin */
+#tGPIO_InitStruct.Pin = FLASH_CS_Pin;
+#tGPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+#tGPIO_InitStruct.Pull = GPIO_NOPULL;
+#tGPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+#tHAL_GPIO_Init(FLASH_CS_GPIO_Port, &GPIO_InitStruct);
+#n
+}
+#n

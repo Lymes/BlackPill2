@@ -1,0 +1,4 @@
+test.c:68:6:DMA2_Stream0_TransferComplete	24	static
+test.c:76:6:update	32	static
+test.c:135:6:render	16	static
+test.c:155:6:init	8	static

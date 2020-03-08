@@ -1,0 +1,2 @@
+audioproc.c:32:6:audioProcessor	24	static
+audioproc.c:45:6:prepareFFTData	48	static
